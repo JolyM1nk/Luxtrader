@@ -184,7 +184,7 @@ let lots_slider = new Swiper(".slider-lots", {
     },
     // when window width is >= 480px
     1024: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 100,
       slidesOffsetBefore: 25,
     }
