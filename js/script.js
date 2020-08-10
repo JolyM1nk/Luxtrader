@@ -171,6 +171,7 @@ let main_slider = new Swiper('.swiper-container', {
 })
 
 let lots_slider = new Swiper(".slider-lots", {
+  slidesPerView: 1,
   autoHeight: true,
   speed: 500,
   loop: true,
@@ -179,18 +180,13 @@ let lots_slider = new Swiper(".slider-lots", {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      centeredSlides: true,
-      slidesOffsetBefore: 115
+      slidesOffsetBefore: 37,
     },
     // when window width is >= 480px
-    550: {
-      slidesPerView: 2,
-      spaceBetween: 50,
-      slidesOffsetBefore: 25
-    },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 100,
+      slidesOffsetBefore: 25,
     }
   },
 

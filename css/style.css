@@ -486,10 +486,6 @@ body._lock {
   transform: rotate(180deg) translate(0, 30%);
 }
 
-.slider-lots__wrapper {
-  display: flex;
-}
-
 .slider-lots__slide {
   width: 250px;
 }
