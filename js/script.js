@@ -141,7 +141,7 @@ $(document).ready( function() {
     $('.menu-page__body').slideToggle(500);
   });
 });
-let main_slider = new Swiper('.swiper-container', {
+let main_slider = new Swiper('.main-slider', {
     // effect: "fade",
     // autoplay: {
     //   delay: 3000,
@@ -165,16 +165,17 @@ let main_slider = new Swiper('.swiper-container', {
     //   clickable: true
     // },
     navigation: {
-      nextEl: ".slider-control__arrow_next",
-      prevEl: ".slider-control__arrow_prev",
-    },
+      nextEl: ".main-slider__control .slider-control__arrow_next",
+      prevEl: ".main-slider__control .slider-control__arrow_prev",
+    }
 })
 
 let lots_slider = new Swiper(".slider-lots", {
-  slidesPerView: 1,
-  autoHeight: true,
+  slidesPerView: 3,
+  autoHeight: false,
   speed: 500,
   loop: true,
+  grabCursor: true,
 
   breakpoints: {
     // when window width is >= 320px
@@ -182,18 +183,22 @@ let lots_slider = new Swiper(".slider-lots", {
       slidesPerView: 1,
       slidesOffsetBefore: 37,
     },
+    768: {
+      slidesPerView: 2,
+      slidesOffsetBefore: 50,
+      spaceBetween: 100,
+    },
     // when window width is >= 480px
     1024: {
       slidesPerView: 3,
       spaceBetween: 100,
-      slidesOffsetBefore: 25,
     }
   },
 
   navigation: {
-    nextEl: ".slider-lots__arrow_next",
-    prevEl: ".slider-lots__arrow_prev",
-  },
+    nextEl: ".slider-lots__control .slider-lots__arrow.slider-lots__arrow_next img",
+    prevEl: ".slider-lots__control .slider-lots__arrow.slider-lots__arrow_prev img"
+  }
 })
 ;
 
