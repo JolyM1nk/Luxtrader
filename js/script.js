@@ -196,8 +196,8 @@ let lots_slider = new Swiper(".slider-lots", {
   },
 
   navigation: {
-    nextEl: ".slider-lots__control .slider-lots__arrow.slider-lots__arrow_next img",
-    prevEl: ".slider-lots__control .slider-lots__arrow.slider-lots__arrow_prev img"
+    nextEl: ".slider-lots__control .slider-lots__arrow.slider-lots__arrow_next",
+    prevEl: ".slider-lots__control .slider-lots__arrow.slider-lots__arrow_prev"
   }
 })
 ;

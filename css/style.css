@@ -700,7 +700,7 @@ body._lock {
 }
 
 .categories {
-  display: flex;
+  margin-bottom: 85px;
 }
 
 .categories_container {
@@ -713,6 +713,7 @@ body._lock {
   position: absolute;
   height: 45px;
   width: 100%;
+  left: 0;
   bottom: 0;
   background-color: #fff;
 }
@@ -747,6 +748,7 @@ body._lock {
 
 .categories__column {
   flex: 0 1 33.33%;
+  max-width: 33.333%;
   padding: 0 50px 25px;
   margin-bottom: 25px;
   position: relative;
@@ -821,6 +823,18 @@ body._lock {
   background-color: #bb9c66;
 }
 
+.categories__text {
+  font-family: PTSans;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.categories__text p {
+  margin-bottom: 40px;
+}
+
 .item {
   width: 250px;
   height: 250px;
@@ -841,6 +855,11 @@ body._lock {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  transition: .5s;
+}
+
+.item:hover .item__bg {
+  transform: scale(1.05);
 }
 
 .item__bg::after {
@@ -892,6 +911,129 @@ body._lock {
   z-index: 2;
 }
 
+.text {
+  font-family: PT Sans;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.text__container {
+  position: relative;
+  padding: 10px 0 17px 130px;
+  box-sizing: border-box;
+  background: url("../img/main/text-decor.png") top left repeat-y;
+}
+
+.text__container::before {
+  content: "";
+  width: 87px;
+  height: 26px;
+  top: -7px;
+  left: 0;
+  position: absolute;
+  background: url("../img/main/pattern.png") left no-repeat;
+}
+
+.text p {
+  margin-bottom: 40px;
+}
+
+.services {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #1c242a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.services__row {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.services__column {
+  flex: 0 1 33.333%;
+  max-width: 33.333%;
+  display: flex;
+  justify-content: center;
+}
+
+.services__item {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service__image {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.service__title {
+  font-family: PFDin;
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.service__title:hover {
+  text-decoration: underline;
+}
+
+.service__text {
+  font-family: PT Sans;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #bb9c66;
+  margin-bottom: 35px;
+}
+
+.service__btn {
+  width: 100%;
+  font-family: PFDin;
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service__btn:hover {
+  text-decoration: underline;
+}
+
+.service__btn::after {
+  content: "";
+  height: 1px;
+  background-color: #bb9c66;
+  width: 50px;
+}
+
+.service__btn::before {
+  content: "";
+  height: 1px;
+  background-color: #bb9c66;
+  width: 50px;
+}
+
 @media (max-width: 1023px) {
   .lot__title {
     font-size: 18px;
@@ -913,6 +1055,12 @@ body._lock {
 
   .categories__column {
     flex: 0 1 50%;
+    max-width: 50%;
+  }
+
+  .services__column {
+    flex: 0 1 50%;
+    max-width: 50%;
   }
 }
 
@@ -1046,11 +1194,26 @@ body._lock {
   .title__main {
     font-size: 25px;
   }
+
+  .text__container {
+    background: url("../img/main/text-decor-rotate.png") 5px top repeat-x;
+    padding: 100px 5px 17px 10px;
+  }
+
+  .text__container::before {
+    display: none;
+  }
 }
 
 @media (max-width: 660px) {
   .categories__column {
     flex: 0 1 100%;
+    max-width: 100%;
+  }
+
+  .services__column {
+    flex: 0 1 100%;
+    max-width: 100%;
   }
 }
 
@@ -1072,6 +1235,8 @@ body._lock {
 .user-header__link_4{background:url("../img/header/lots_icon.png") left center no-repeat}
 .slider-control__arrow_prev{background:url("../img/main/slider/arrow.png")}
 .slider-control__arrow_next{background:url("../img/main/slider/arrow.png")}
+.text__container{background:url("../img/main/text-decor.png") top left repeat-y}
+.text__container::before{background:url("../img/main/pattern.png") left no-repeat}
 }
 
  @media (max-width: 1023px){
@@ -1101,7 +1266,7 @@ body._lock {
  @media (max-width: 767px){
 
 @supports (-webkit-appearance:none){
-
+.text__container{background:url("../img/main/text-decor-rotate.png") 5px top repeat-x}
 }
 
 }
