@@ -142,28 +142,9 @@ $(document).ready( function() {
   });
 });
 let main_slider = new Swiper('.main-slider', {
-    // effect: "fade",
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false
-    // },
-    
-    // observer: true,
-    // observeParents: true,
     slidesPerView: 1,
-    // spaceBetween: 0,
-    // autoHeight: true,
     speed: 800,
 
-    // touchRatio: 0,
-    // simulateTouch: false,
-    // Loop: true,
-    // preLoadImages: false,
-    // lazy: true,
-    // pagination: {
-    //   el: "slider-quality__pagging",
-    //   clickable: true
-    // },
     navigation: {
       nextEl: ".main-slider__control .slider-control__arrow_next",
       prevEl: ".main-slider__control .slider-control__arrow_prev",
@@ -198,6 +179,22 @@ let lots_slider = new Swiper(".slider-lots", {
   navigation: {
     nextEl: ".slider-lots__control .slider-lots__arrow.slider-lots__arrow_next",
     prevEl: ".slider-lots__control .slider-lots__arrow.slider-lots__arrow_prev"
+  }
+})
+
+let quot_slider = new Swiper('.slider-quotes', {
+  slidesPerView: 1,
+  autoHeight: true,
+  speed: 800,
+  loop: true,
+  effect: "fade",
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+
+  navigation: {
+    nextEl: ".slider-quotes__refresh",
   }
 })
 ;
